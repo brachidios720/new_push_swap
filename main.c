@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/23 23:25:48 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/11/25 02:42:47 by raphaelcarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	main(int ac, char **av)
 {
