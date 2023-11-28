@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:04:38 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 01:52:41 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 18:55:38 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/27 23:12:01 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "check.h"
+# include "move.h"
 
-int	ft_isdigit(char *c)
+void		do_sa(t_stack *a)
 {
-	int	i;
+	t_stack	*tmp;
 
-	i = 0;
-	while(c[i])
-	{
-		if(!(c[i] >= '0' && c[i] =< '9'))
-			return(1);
-		i++;
-	}
-	return(0);
-}	
-
-int	ft_check(int ac, char **av, t_stack *stack_a)
-{
-	if(ac < 2)
-		return(1);
-	if(ft_isdigit(av) == 1)
-		return(1);
-	insert_number(stack a)
-	return(0);
+	if(a == NULL)
+		return;
+	tmp = a->data;
+	tmp = a->next->data;
+	tmp->data = tmp->next->data;
+	tmp->next->data = tmp->data;
 }
+
+void		do_sb(t_stack *b)
+{
+	t_stack	*tmp;
+
+	if(b == NULL)
+		return;
+	tmp = b->data;
+	tmp = b->next->data;
+	tmp->data = tmp->next->data;
+	tmp->next->data = tmp->data;
+}
+
+void		do_ss(t_stack *a, t_stack *b)
+{
+	do_sa(a);
+	do_sb(b);
+} 

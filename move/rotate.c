@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/27 23:15:34 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:59:35 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 01:46:30 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP.H
-#define PUSH_SWAP.H
+#include "move.h"
 
-# include <stdlib.h>
-# include <stddef.h>
-
-typedef struct stack
+void		do_ra(t_stack *a)
 {
-  void *data;
-  struct stack *next;
-} t_stack;
-
-#endif
+	

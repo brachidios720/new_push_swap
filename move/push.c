@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/27 23:15:34 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:47:35 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/27 23:11:54 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP.H
-#define PUSH_SWAP.H
+#include "move.h"
 
-# include <stdlib.h>
-# include <stddef.h>
-
-typedef struct stack
+void		do_pa(t_stack *b, t_stack *a)
 {
-  void *data;
-  struct stack *next;
-} t_stack;
+	t_stack	*tmp;
+	t_stack *tmp2;
+	
+	tmp = b->data;
+	tmp2 = a->data;
+	a->data = tmp;
+	b->data = tmp2;
+}
 
-#endif
+void		do_pb(t_stack *a, t_stack *b)
+{
+	t_stack	*tmp;
+	t_stack *tmp2;
+
+	tmp = a->data;
+	tmp2 = b->data;
+	b->data = tmp;
+	a->data = tmp2;
+}

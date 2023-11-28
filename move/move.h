@@ -6,16 +6,14 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:46:13 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/24 17:37:57 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/11/27 21:35:40 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef move.h
+#define move.h
+
 #include "../push_swap.h"
-
-#include <stdlib.h> 
-#ifndef "MOVE.H"
-#define "MOVE.H"
-
 
 
 #endif

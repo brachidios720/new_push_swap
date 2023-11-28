@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   afficher.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/27 23:15:34 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:29:44 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/27 21:34:30 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP.H
-#define PUSH_SWAP.H
-
-# include <stdlib.h>
-# include <stddef.h>
-
-typedef struct stack
-{
-  void *data;
-  struct stack *next;
-} t_stack;
+#ifndef afficher.h
+#define afficher.h
+#include "../push_swap.h"
 
 #endif

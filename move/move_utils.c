@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
+/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/26 02:59:07 by raphaelcarb      ###   ########.fr       */
+/*   Updated: 2023/11/28 01:54:00 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_stack		*ft_add_bottom(void *data)
 
 // ajoute 1 a 1 les nombres dans un nouveau noeud qui sont crées 1 a 1;
 
-t_stack		inser_number(t_stack **a, int nbr[], int size)
+t_stack		inser_number(t_stack **a, int *nbr, int size)
 {
 	int	i;
 	t_stack *new_node;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pimp_my_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
+/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:31:59 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/26 01:13:31 by raphaelcarb      ###   ########.fr       */
+/*   Updated: 2023/11/27 20:31:36 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,13 @@ t_stack  return_int_in_stack(t_stack *a)
     int convert_value;
 
     tmp = a;
-    while(tmp)
+    while(tmp) // j'aurai pas fais com ca..
     {
         convert_value = ft_atoi(&(tmp->data));
         tmp->data = convert_value;
         tmp = tmp->next;
     }
-    return(tmp);
+    return(tmp); // c nul ca?
 }
+
+// petit con de merde

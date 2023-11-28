@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
+/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:05:14 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/25 17:08:15 by raphaelcarb      ###   ########.fr       */
+/*   Updated: 2023/11/27 21:35:45 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

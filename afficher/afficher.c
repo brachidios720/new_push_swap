@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   afficher.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/27 23:15:34 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:29:23 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 01:48:20 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP.H
-#define PUSH_SWAP.H
+#include "afficher.h"
 
-# include <stdlib.h>
-# include <stddef.h>
-
-typedef struct stack
+char	diplay(t_stack *stack)
 {
-  void *data;
-  struct stack *next;
-} t_stack;
-
-#endif
+	while(stack)
+	{
+		printf("%d", stack->data);
+		stack = stack->next;
+	}
+}

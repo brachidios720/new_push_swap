@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/27 23:15:34 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 22:08:31 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/27 23:01:13 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP.H
-#define PUSH_SWAP.H
+#include "stack.h"
 
-# include <stdlib.h>
-# include <stddef.h>
-
-typedef struct stack
+t_stack		*get_last(t_stack *sstack)
 {
-  void *data;
-  struct stack *next;
-} t_stack;
-
-#endif
+	while(sstack && sstack->next != NULL)
+		sstack = sstack->next;
+	return(sstack);
+}
