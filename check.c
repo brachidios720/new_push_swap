@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:04:38 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:37:48 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/11/29 22:33:35 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,18 @@ int	ft_isdigit(char *c)
 	return(0);
 }	
 
-int	check(int ac, char **av, t_stack *stack_a)
+int	check(int ac, char **av)
 {
-	if(ac < 2)
-		return(1);
-	if(ft_isdigit(av) == 1)
-		return(1);
-	insert_number(&stack_a, av + 1, ac - 1);
-	return(0);
+	// iterate over av
+	// chec if av[i] is a correct digit
+	int	i;
+	i = 0;
+	while(av)
+	{
+		if(ac < 2)
+			return(1);
+		if(ft_isdigit(av) == 1)
+			return(1);
+		return(0);
+	}
 }

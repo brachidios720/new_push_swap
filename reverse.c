@@ -6,13 +6,13 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 00:10:26 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:39:30 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/11/29 22:11:52 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	do_rra(t_stack *a)
-{
+// void	do_rra(t_stack *a)
+// {
 
-}
+// }
