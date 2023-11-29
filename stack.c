@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:40:29 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 22:08:31 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 19:37:13 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+t_stack		*get_last(t_stack *sstack)
 {
-	t_stack	*stack_a;
-	
-	if(ft_check(ac,av, stack_a))
-		return(0);
-	afficher(stack_a);
+	while(sstack && sstack->next != NULL)
+		sstack = sstack->next;
+	return(sstack);
 }
-// 	stack_a = ft_radix_sort(stack_a);
-// 	display(*stack_a);
-// 	return(0);
-// }

@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:40:29 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 18:55:38 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 19:37:15 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void		do_sa(t_stack *a)
 {
-	t_stack	*stack_a;
-	
-	if(ft_check(ac,av, stack_a))
-		return(0);
-	afficher(stack_a);
+	t_stack	*tmp;
+
+	if(a == NULL)
+		return;
+	tmp = a->data;
+	tmp = a->next->data;
+	tmp->data = tmp->next->data;
+	tmp->next->data = tmp->data;
 }
-// 	stack_a = ft_radix_sort(stack_a);
-// 	display(*stack_a);
-// 	return(0);
-// }
+
+void		do_sb(t_stack *b)
+{
+	t_stack	*tmp;
+
+	if(b == NULL)
+		return;
+	tmp = b->data;
+	tmp = b->next->data;
+	tmp->data = tmp->next->data;
+	tmp->next->data = tmp->data;
+}
+
+void		do_ss(t_stack *a, t_stack *b)
+{
+	do_sa(a);
+	do_sb(b);
+} 

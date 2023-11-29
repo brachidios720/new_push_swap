@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:40:29 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:47:35 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 19:37:05 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void		do_pa(t_stack *b, t_stack *a)
 {
-	t_stack	*stack_a;
+	t_stack	*tmp;
+	t_stack *tmp2;
 	
-	if(ft_check(ac,av, stack_a))
-		return(0);
-	afficher(stack_a);
+	tmp = b->data;
+	tmp2 = a->data;
+	a->data = tmp;
+	b->data = tmp2;
 }
-// 	stack_a = ft_radix_sort(stack_a);
-// 	display(*stack_a);
-// 	return(0);
-// }
+
+void		do_pb(t_stack *a, t_stack *b)
+{
+	t_stack	*tmp;
+	t_stack *tmp2;
+
+	tmp = a->data;
+	tmp2 = b->data;
+	b->data = tmp;
+	a->data = tmp2;
+}

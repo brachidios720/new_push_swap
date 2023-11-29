@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   afficher.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/28 19:40:29 by rcarbonn         ###   ########.fr       */
+/*   Created: 2023/11/27 21:29:23 by rcarbonn          #+#    #+#             */
+/*   Updated: 2023/11/28 19:36:42 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+char	afficher(t_stack *stack)
 {
-	t_stack	*stack_a;
-	
-	if(ft_check(ac,av, stack_a))
-		return(0);
-	afficher(stack_a);
+	while (stack)
+	{
+		printf("%d", stack->data);
+		stack = stack->next;
+	}
 }
-// 	stack_a = ft_radix_sort(stack_a);
-// 	display(*stack_a);
-// 	return(0);
-// }
