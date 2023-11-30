@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:32:30 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/29 22:31:25 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:49:45 by raphaelcarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	
-	if(ft_check(ac,av))
+	if(ft_check(ac, **av))
 		return(0);
 	insert_number(&stack_a, av + 1, ac - 1);
 	afficher(stack_a);
