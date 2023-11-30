@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
+/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/30 01:54:54 by raphaelcarb      ###   ########.fr       */
+/*   Updated: 2023/11/30 22:23:49 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,16 @@ void ft_lst_addback(t_stack **stack, t_stack *node)
 	tmp = (*stack);
 	if(tmp == NULL)
 	{
-		(tmp) = node;
+		(*stack) = node;
 		return;
 	}
 	while(tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = node;
+	node->next = NULL;
 }
 
-// ajoute 1 a 1 les nombres dans un nouveau noeud qui sont crées 1 a 1;
-
-// main(int argc, char **argv)
-// {
-// 	t_stack *stack_a;
-// 	t_stack *stack_b;
-// 	insert_number(&stack_a, argv + 1, argc - 1);
-// }
-
-int inser_number(t_stack **stack, char **nbr, int size)
+int insert_number(t_stack **stack, char **nbr, int size)
 {
 	int	i;
 	t_stack *new_node;
@@ -60,7 +52,7 @@ int inser_number(t_stack **stack, char **nbr, int size)
 	i = 0;
 	while(i < size)
 	{
-		new_node = create_new_node(ft_atoi(&nbr[i]));
+		new_node = create_new_node(*ft_atoi(&nbr[i]));
 		if(new_node == NULL)
 			return (-1);
 		ft_lst_addback(stack, new_node);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raphaelcarbonnel <raphaelcarbonnel@stud    +#+  +:+       +#+        */
+/*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/30 01:55:02 by raphaelcarb      ###   ########.fr       */
+/*   Updated: 2023/11/30 18:23:16 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct stack
   struct stack *next;
 } t_stack;
 
-int inser_number(t_stack **stack, char **nbr, int size);
+int insert_number(t_stack **stack, char **nbr, int size);
 t_stack		*get_last(t_stack *sstack);
 void ft_lst_addback(t_stack **stack, t_stack *node);
 int	ft_isdigit(char *c);
