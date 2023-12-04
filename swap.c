@@ -6,38 +6,41 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:55:38 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/29 22:11:43 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 04:28:40 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void		do_sa(t_stack *a)
-// {
-// 	t_stack	*tmp;
+void	do_sa(t_stack **stack_a)
+{
+	t_stack *tmp;
+	t_stack *tmp2;
 
-// 	if(a == NULL)
-// 		return;
-// 	tmp = a->data;
-// 	tmp = a->next->data;
-// 	tmp->data = tmp->next->data;
-// 	tmp->next->data = tmp->data;
-// }
+	tmp = *stack_a;
+	tmp2 = tmp->next;
+	*stack_a = tmp2;
+	tmp->next = tmp2->next;
+	tmp2->next = tmp;
+	ft_putstr("sa\n");
+}
 
-// void		do_sb(t_stack *b)
-// {
-// 	t_stack	*tmp;
+void	do_sb(t_stack **stack_b)
+{
+	t_stack *tmp;
+	t_stack *tmp2;
 
-// 	if(b == NULL)
-// 		return;
-// 	tmp = b->data;
-// 	tmp = b->next->data;
-// 	tmp->data = tmp->next->data;
-// 	tmp->next->data = tmp->data;
-// }
+	tmp = *stack_b;
+	tmp2 = tmp->next;
+	*stack_b = tmp2;
+	tmp->next = tmp2->next;
+	tmp2->next = tmp;
+	ft_putstr("sb\n");
+}
 
-// void		do_ss(t_stack *a, t_stack *b)
-// {
-// 	do_sa(a);
-// 	do_sb(b);
-// } 
+void	do_ss(t_stack **stack_a, t_stack **stack_b)
+{
+	do_sa(stack_a);
+	do_sb(stack_b);
+	ft_putstr("ss\n");
+}

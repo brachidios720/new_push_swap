@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/30 22:23:49 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 04:02:26 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,18 +60,3 @@ int insert_number(t_stack **stack, char **nbr, int size)
 	}
 	return (0);
 }
-
-// int 	get_stack_size(t_stack *a)
-// {
-// 	t_stack *tmp;
-// 	int count;
-	
-// 	count = 0;
-// 	tmp = a;
-// 	while(tmp)
-// 	{
-// 		count++;
-// 		tmp = tmp->next;
-// 	}
-// 	return(count);
-// }

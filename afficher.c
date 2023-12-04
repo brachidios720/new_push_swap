@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 21:29:23 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/11/29 22:21:43 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 04:09:26 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,15 @@ void	afficher(t_stack *stack)
 	{
 		printf("%d\n", stack->data);
 		stack = stack->next;
+	}
+}
+
+void	ft_putstr(char *str)
+{
+	int i = 0;
+	while(str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
 	}
 }
