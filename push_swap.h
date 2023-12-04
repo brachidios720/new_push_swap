@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 04:32:49 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 06:24:47 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ t_stack		*create_new_node(int data);
 int		*ft_atoi(char **av);
 
 //algo
+int		ft_is_sorted(t_stack **stack);
 
 
 //display
