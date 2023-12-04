@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 06:24:47 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 06:39:29 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct stack
 {
   int data;
+  int index;
   struct stack *next;
 } t_stack;
 

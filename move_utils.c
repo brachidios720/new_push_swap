@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 04:02:26 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/04 07:17:55 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_stack		*create_new_node(int data)
 	new = (t_stack *)malloc(sizeof(t_stack));
 	if(!new)
 		return(NULL);
+	new->index = -1;
 	new->data = data;
 	new->next = NULL;
 	return(new);
