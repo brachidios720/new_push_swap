@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 06:39:29 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/05 02:22:23 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,13 @@ int	ft_isdigit(char *c);
 t_stack  *return_int_in_stack(t_stack *a);
 int	check(int ac, char **av);
 t_stack		*create_new_node(int data);
-int		*ft_atoi(char **av);
+int		ft_atoi(char *str);
 
 //algo
 int		ft_is_sorted(t_stack **stack);
-
+int		ft_lstsize(t_stack *stack);
+static int 		get_max_bit(t_stack **stack_a);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 //display
 void	afficher(t_stack *stack);

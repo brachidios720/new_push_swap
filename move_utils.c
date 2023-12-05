@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 07:17:55 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/05 01:53:37 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int insert_number(t_stack **stack, char **nbr, int size)
 	i = 0;
 	while(i < size)
 	{
-		new_node = create_new_node(*ft_atoi(&nbr[i]));
+		new_node = create_new_node(ft_atoi(nbr[i]));
 		if(new_node == NULL)
 			return (-1);
 		ft_lst_addback(stack, new_node);
