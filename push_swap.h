@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:33:17 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/06 03:28:32 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/06 03:54:59 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	check(int ac, char **av);
 t_stack		*create_new_node(int data);
 int		ft_atoi(char *str);
 void	index_stack(t_stack **stack);
+int		is_duplicate(t_stack **stack_a);
 
 
 //algo
