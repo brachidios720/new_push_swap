@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 04:57:11 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/05 01:09:57 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/05 23:20:01 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ void	ft_free_stack(t_stack **stack)
 	t_stack *head;
 	
 	head = *stack;
-	while(stack)
+	while(head)
 	{
 		tmp = head;
 		head = head->next;
 		free(tmp);
 	}
-	free(stack);
+	// free(stack);
 }
 
 int		ft_lstsize(t_stack *stack)

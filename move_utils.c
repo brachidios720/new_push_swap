@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 00:45:58 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/05 01:53:37 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/06 01:46:16 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ int insert_number(t_stack **stack, char **nbr, int size)
 		ft_lst_addback(stack, new_node);
 		i++;  
 	}
+	index_stack(stack);
 	return (0);
 }

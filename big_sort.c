@@ -6,25 +6,25 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 23:27:00 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/05 03:00:10 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/06 02:03:31 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int 		get_max_bit(t_stack **stack_a)
+int 		get_max_bit(t_stack **stack_a)
 {
 	int	max;
 	t_stack *head;
 	int max_bits;
 	
 	head = *stack_a;
-	max = head->data;
+	max = head->index;
 	max_bits = 0;
 	while(head)
 	{
-		if(head->data > max)
-			max = head->data;
+		if(head->index > max)
+			max = head->index;
 		head = head->next;
 	}
 	while((max >> max_bits) != 0)
@@ -50,12 +50,12 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 		while(j++ < size)
 		{
 			head = *stack_a;
-			if(((head->data >> i) & 1) == 1)
+			if(((head->index >> i) & 1) == 1)
 				do_ra(stack_a);
 			else
 				do_pb(stack_a, stack_b);
 		}
-		while(ft_lstsize(*stack_b))
+		while(ft_lstsize(*stack_b) != 0)
 			do_pa(stack_b, stack_a);
 		i++;
 	}
