@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 01:15:31 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/06 01:28:54 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 04:09:46 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 static t_stack	*get_next_min(t_stack **stack)
 {
-	t_stack *head;
-	t_stack *min;
+	t_stack	*head;
+	t_stack	*min;
 	int		has_min;
-	
+
 	min = NULL;
 	has_min = 0;
 	head = *stack;
-	if(head)
+	if (head)
 	{
-		while(head)
+		while (head)
 		{
-			if((head->index == -1) && (!has_min || head->data < min->data))
+			if ((head->index == -1) && (!has_min || head->data < min->data))
 			{
 				min = head;
 				has_min = 1;
@@ -38,12 +38,12 @@ static t_stack	*get_next_min(t_stack **stack)
 
 void	index_stack(t_stack **stack)
 {
-	t_stack *head;
+	t_stack	*head;
 	int		index;
-	
+
 	index = 0;
 	head = get_next_min(stack);
-	while(head)
+	while (head)
 	{
 		head->index = index++;
 		head = get_next_min(stack);

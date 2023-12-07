@@ -6,7 +6,7 @@
 #    By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 23:01:17 by rcarbonn          #+#    #+#              #
-#    Updated: 2023/12/06 23:26:53 by rcarbonn         ###   ########.fr        #
+#    Updated: 2023/12/07 03:51:42 by rcarbonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,9 @@ SRC		=			afficher.c \
 					utils.c \
 					utils2.c 
 					
-all:   
+all: $(NAME)
+
+$(NAME):
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 
@@ -45,4 +47,7 @@ fclean:
 re: fclean all 
 
 .PHONY: all, clean, fclean, re
+
+
+
 

@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 00:10:26 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 04:28:50 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 03:55:38 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	do_rra(t_stack **stack_a)
 {
-	t_stack *last;
-	t_stack *tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	last = *stack_a;
 	tmp = *stack_a;
-	while(last->next != NULL)
+	while (last->next != NULL)
 	{
 		tmp = last;
 		last = last->next;
@@ -32,12 +32,12 @@ void	do_rra(t_stack **stack_a)
 
 void	do_rrb(t_stack **stack_b)
 {
-	t_stack *last;
-	t_stack *tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	last = *stack_b;
 	tmp = *stack_b;
-	while(last->next != NULL)
+	while (last->next != NULL)
 	{
 		tmp = last;
 		last = last->next;

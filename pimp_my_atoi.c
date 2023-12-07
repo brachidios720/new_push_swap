@@ -6,41 +6,40 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:31:59 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/05 01:53:31 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 06:07:52 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-int ft_is_whitespace(char c)
+int	ft_is_whitespace(char c)
 {
-    return (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\f' || c == '\r');
+	return (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\f'
+		|| c == '\r');
 }
 
-int ft_atoi(char *str)
+t_bool	ft_atoi(const char *str, int *count)
 {
-    int i = 0;
-    int count = 1;
-    int nb = 0;
+	int	sign;
 
-    while (ft_is_whitespace(str[i]))
-    {
-        i++;
-    }
-
-    if (str[i] == '-' || str[i] == '+')
-    {
-        if (str[i] == '-')
-            count++;
-        i++;
-    }
-
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        nb = nb * 10 + (str[i] - '0');
-        i++;
-    }
-
-    return (count % 2 == 1) ? nb : -nb;
+	*count = 0;
+	sign = 1;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign = -1;
+		str++;
+	}
+	while (ft_isdigit(*str))
+	{
+		if ((*count > (INT_MAX / 10)) || (*count < (INT_MIN / 10)))
+			return (1);
+		*count = (*count * 10);
+		if ((*count > (INT_MAX - (*str - '0')))
+			|| (*count < (INT_MIN + (*str - '0'))))
+			return (1);
+		*count += (sign * (*str - '0'));
+		str++;
+	}
+	return (*str != '\0');
 }

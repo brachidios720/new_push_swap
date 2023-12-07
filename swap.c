@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:55:38 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/04 04:28:40 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 03:59:49 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	do_sa(t_stack **stack_a)
 {
-	t_stack *tmp;
-	t_stack *tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = *stack_a;
 	tmp2 = tmp->next;
@@ -27,8 +27,8 @@ void	do_sa(t_stack **stack_a)
 
 void	do_sb(t_stack **stack_b)
 {
-	t_stack *tmp;
-	t_stack *tmp2;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
 	tmp = *stack_b;
 	tmp2 = tmp->next;

@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 03:01:02 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/06 03:01:31 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 06:29:56 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@ int	get_distance(t_stack **stack, int index)
 		head = head->next;
 	}
 	return (distance);
+}
+
+void	ft_error(void)
+{
+	ft_putstr("error\n");
 }

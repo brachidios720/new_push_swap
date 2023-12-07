@@ -6,7 +6,7 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 03:14:01 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/06 03:28:55 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/07 04:11:35 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	simple_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
-	
-	if(ft_is_sorted(stack_a) || ft_lstsize(*stack_a) == 0
+
+	if (ft_is_sorted(stack_a) || ft_lstsize(*stack_a) == 0
 		|| ft_lstsize(*stack_a) == 1)
-		return;
+		return ;
 	size = ft_lstsize(*stack_a);
 	if (size == 2)
 		do_sa(stack_a);
