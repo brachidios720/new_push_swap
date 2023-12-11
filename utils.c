@@ -6,13 +6,11 @@
 /*   By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 04:57:11 by rcarbonn          #+#    #+#             */
-/*   Updated: 2023/12/07 06:16:01 by rcarbonn         ###   ########.fr       */
+/*   Updated: 2023/12/11 18:23:16 by rcarbonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-#include <stdio.h>
 
 int	ft_is_sorted(t_stack **stack)
 {

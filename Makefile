@@ -6,7 +6,7 @@
 #    By: rcarbonn <rcarbonn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 23:01:17 by rcarbonn          #+#    #+#              #
-#    Updated: 2023/12/07 03:51:42 by rcarbonn         ###   ########.fr        #
+#    Updated: 2023/12/11 23:50:26 by rcarbonn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,3 @@ fclean:
 re: fclean all 
 
 .PHONY: all, clean, fclean, re
-
-
-
-
